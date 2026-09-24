@@ -18,7 +18,7 @@ pipeline {
                         to: 'manish1111maheshwari@gmail.com',
                         subject: "Jenkins Pipeline: Test Stage - ${currentBuild.currentResult}",
                         body: "The Unit and Integration Tests stage has completed. Please find the attached logs.",
-                        attachLog: true
+                        attachLog: true,
                         compressLog: true
                     )
                 }
@@ -41,7 +41,8 @@ pipeline {
                         to: 'manish1111maheshwari@gmail.com',
                         subject: "Jenkins Pipeline: Security Scan Stage - ${currentBuild.currentResult}",
                         body: "The Security Scan stage has completed. Please find the attached logs.",
-                        attachLog: true
+                        attachLog: true,
+                        compressLog: true
                     )
                 }
             }
