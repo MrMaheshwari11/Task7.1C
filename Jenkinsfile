@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
     stages {
@@ -20,6 +19,7 @@ pipeline {
                         subject: "Jenkins Pipeline: Test Stage - ${currentBuild.currentResult}",
                         body: "The Unit and Integration Tests stage has completed. Please find the attached logs.",
                         attachLog: true
+                        compressLog: true
                     )
                 }
             }
